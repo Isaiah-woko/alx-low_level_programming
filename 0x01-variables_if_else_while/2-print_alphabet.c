@@ -8,9 +8,16 @@
 
 int main(void)
 {
-	char alp;
+	char lower = 'a';
 
-	for (alp = 'a'; alp <= 'z'; alp++)
-		putchar(alp);
+	
+	while (lower <= 'z');
+	{
+		putchar(lower);
+		lower++;
+	}
+
+		putchar('\n;);
 
 	return (0);
+}
