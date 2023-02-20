@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - entry point
@@ -11,21 +12,21 @@ int main(void)
 
 	for (c = '0'; c <= '9'; c++)
 	{
-	for (i = '0'; i <= '9'; i++)
+		for (i = '0'; i <= '9'; i++)
 		{
-				if (c < i)
-				{
-					putchar(c);
-					putchar(i);
+			if (c < i)
+			{
+				putchar(c);
+				putchar(i);
 
-					if (c != '7')
-					{
-						putchar(',');
-						putchar(' ');
-					}
+				if (c != '8' || (c == '8' && i != '9'))
+				{
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
+	}
 	putchar('\n');
 	return (0);
 }
