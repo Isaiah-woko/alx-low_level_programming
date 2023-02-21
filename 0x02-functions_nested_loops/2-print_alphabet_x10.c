@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * print_alphabext_x10 - print lowercase alphabet 10 times
+ * print_alphabet_x10 - entry point
  *
- * Return 0
  */
 
 void print_alphabet_x10(void)
