@@ -3,9 +3,10 @@
 #include <math.h>
 
 /**
- * main - prints the largest prime factor
+ * main - prime numbers
+ * followed by a new line
  *
- * Return always 0 (success)
+ * Return: always 0 (success)
  */
 
 int main(void)
@@ -37,5 +38,5 @@ int main(void)
 
 	printf("%ld\n", max);
 
-	return(0);
+	return (0);
 }
