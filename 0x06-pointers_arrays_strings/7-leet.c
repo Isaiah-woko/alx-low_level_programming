@@ -9,7 +9,7 @@
 
 char *leet(char *s)
 {
-	char a[] = "aeotlLAEOTL";
+	char a[] = "aeotlAEOTL";
 	char n[] = "4307143071";
 	int i = 0;
 	int j;
