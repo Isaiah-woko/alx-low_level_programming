@@ -28,7 +28,5 @@ char *_strncpy(char *dest, char *src, int n)
 		n--;
 	}
 
-	dest[dest_pos] = '\0';
-
 	return (dest);
 }
