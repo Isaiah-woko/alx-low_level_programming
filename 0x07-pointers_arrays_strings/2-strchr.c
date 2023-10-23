@@ -9,7 +9,6 @@
 
 char *_strchr(char *s, char c)
 {
-	char *p = '\0';
 
 	while (*s >= '\0')
 	{
@@ -20,5 +19,5 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 
-		return (p);
+		return ('\0');
 }
