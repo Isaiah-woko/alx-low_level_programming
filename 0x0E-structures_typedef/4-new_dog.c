@@ -2,7 +2,6 @@
 
 int _len(char *str);
 char *_strcpy(char *dest, char *src);
-dog_t *dog;
 
 /**
  * _len - find the length of string
@@ -32,9 +31,10 @@ char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
-	while (src[i++])
+	while (src[i])
 	{
 		dest[i] = src[i];
+		i++;
 	}
 	dest[i] = '\0';
 	return (dest);
@@ -52,6 +52,7 @@ char *_strcpy(char *dest, char *src)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	dog_t *dog;
 
 	if (name == NULL || age < 0 || owner == NULL)
 	{
