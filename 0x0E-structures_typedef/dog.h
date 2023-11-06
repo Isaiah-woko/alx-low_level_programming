@@ -1,6 +1,13 @@
 #ifndef DOG_H
 #define DOG_H
 
+/**
+ * struct dog - A code that contains the structure for do
+ * @name: the name of the dog
+ * @age: yhe age of the dog
+ * @owner: the name of the owner of the dog
+ */
+
 struct dog
 {
 	char *name;
