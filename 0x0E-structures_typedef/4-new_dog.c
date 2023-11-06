@@ -12,9 +12,9 @@ dog_t *dog;
 
 int _len(char *str)
 {
-	int len = 0;
+	int len = 1;
 
-	while (str[len] != '\0')
+	while (str[len])
 	{
 		len++;
 	}
@@ -32,10 +32,9 @@ char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
-	while (src[i] != '\0')
+	while (src[i++])
 	{
 		dest[i] = src[i];
-		i++;
 	}
 	dest[i] = '\0';
 	return (dest);
@@ -79,9 +78,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	_strcpy(dog->name, name);
+	dog->name = _strcpy(dog->name, name);
 	dog->age = age;
-	_strcpy(dog->owner, owner);
+	dog->owner = _strcpy(dog->owner, owner);
 
 	return (dog);
 }
