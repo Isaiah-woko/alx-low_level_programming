@@ -60,14 +60,15 @@ list_t *create_node(const char *str)
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_node = create_node(str);
+	list_t *new_node;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-
+	new_node = create_node(str);
+	
 	if (new_node == NULL)
 	{
 		return (NULL);
