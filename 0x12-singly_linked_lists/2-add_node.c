@@ -42,6 +42,7 @@ list_t *create_node(const char *str)
 
 	if (new_node->str == NULL)
 	{
+		free(new_node);
 		return (NULL);
 	}
 
