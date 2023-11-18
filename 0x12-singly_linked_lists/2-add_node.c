@@ -69,7 +69,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	new_node = create_node(str);
-	
+
 	if (new_node == NULL)
 	{
 		return (NULL);
