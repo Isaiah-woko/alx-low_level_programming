@@ -30,8 +30,15 @@ int _strlen(const char *str)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal = 0;
-	int len = _strlen(b);
+	int len;
 	int base = 1, i;
+
+	if (b == NULL)
+	{
+		return (0);
+	}
+
+	len = _strlen(b);
 
 	for (i = len - 1; i >= 0; i--)
 	{
@@ -39,7 +46,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			decimal += base;
 		}
-		else if (b[i] != '0' || b == NULL)
+		else if (b[i] != '0')
 		{
 			return (0);
 		}
