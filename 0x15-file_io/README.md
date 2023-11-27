@@ -1,0 +1,1 @@
+This directory would containcodes for my learning of file operations in c
