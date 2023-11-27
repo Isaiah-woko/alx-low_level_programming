@@ -1,5 +1,7 @@
 #include "main.h"
 
+ssize_t print_and_read(int file_descriptor, char *buffers, size_t letters);
+
 /**
  * read_textfile - a function that reads a text file
  * and prints it to the POSIX standard output.
@@ -10,8 +12,8 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t bytes_written, file_read;
 	int file_descriptor;
+	ssize_t result;
 	char *buffer;
 
 	if (filename == NULL)
@@ -32,6 +34,26 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
+	result = print_and_read(file_descriptor, buffer, letters);
+
+	close(file_descriptor);
+	free(buffer);
+
+	return (result);
+}
+
+/**
+ * print_and_read - a helping function to print and read a file
+ * @file_descriptor: the file descriptor
+ * @buffer: the buffer
+ * @letters: the letters
+ * Return: the read file
+*/
+
+ssize_t print_and_read(int file_descriptor, char *buffer, size_t letters)
+{
+	ssize_t bytes_written, file_read;
+
 	file_read = read(file_descriptor, buffer, letters);
 	if (file_read == -1)
 	{
@@ -43,15 +65,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer[file_read] = '\0';
 
 	bytes_written = write(STDOUT_FILENO, buffer, file_read);
-	if (bytes_written == -1 || (size_t)bytes_written != (size_t)file_read)
+	if (bytes_written == -1 || bytes_written != file_read)
 	{
 		close(file_descriptor);
 		free(buffer);
 		return (0);
 	}
-
-	close(file_descriptor);
-	free(buffer);
 
 	return (file_read);
 }
