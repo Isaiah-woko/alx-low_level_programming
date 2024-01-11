@@ -1,5 +1,9 @@
 #include "lists.h"
 
+dlistint_t *insert_node(dlistint_t *current,
+						unsigned int idx, dlistint_t *new_node);
+
+
 /**
  * insert_dnodeint_at_index - Insert a new node at a given position in a
  * doubly linked list.

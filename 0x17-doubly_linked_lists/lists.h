@@ -27,7 +27,5 @@ void free_dlistint(dlistint_t *head);
 int sum_dlistint(dlistint_t *head);
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
-dlistint_t *insert_node(dlistint_t *current,
-						unsigned int idx, dlistint_t *new_node);
 
 #endif/*LIST_H*/
