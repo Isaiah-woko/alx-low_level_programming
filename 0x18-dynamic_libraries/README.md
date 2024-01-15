@@ -1,0 +1,1 @@
+This repo contains a dynamic C library
